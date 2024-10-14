@@ -1,133 +1,67 @@
 "use client"
 import React, { useEffect, useState } from 'react'
+import sanityClient from '../../blogClient'
+import { PulseLoader } from 'react-spinners';
+
+
+interface Rate {
+    id: string;
+    section: {
+      sectionTitle: string;
+      rateOptions: {
+        _key: string;
+        type: string;
+        rate: string;
+        clearingFee: string;
+        duration: string;
+      }[];
+    };
+  }
 
 const RatesSection = () => {
-    // const [getRates, setGetRates] = useState([]);
-    // const [loading, setLoading] = useState(true);
-    // const [error, setError] = useState(null);
+    const [getRates, setGetRates] = useState<Rate[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<Error | null>(null);
 
 
-    // useEffect(() => { 
-    //     sanityClient.fetch(
-    //         `
-    //         *[_type == 'rateInformation']{
-    //             ...,
-    //             content[]->{
-    //                 ...,
-    //             }
-    //           }
-    //         `
-    //     )
-    //     .then((data) => {
-    //         setGetRates(data);
-    //         setLoading(false);
-    //         // console.log(data, 'RATES');
-    //       })
-    //       .catch((err) => {
-    //         setError(err);
-    //         console.log(err);
-    //         setLoading(false);
-    //       });
-    // },[])
+    useEffect(() => { 
+        sanityClient.fetch(
+            `
+            *[_type == 'rateInformation']{
+                ...,
+                content[]->{
+                    ...,
+                }
+              }
+            `
+        )
+        .then((data) => {
+            setGetRates(data);
+            setLoading(false);
+            // console.log(data, 'RATES');
+          })
+          .catch((err) => {
+            setError(err);
+            console.log(err);
+            setLoading(false);
+          });
+    },[])
 
-    // if (loading) {
-    //     return <p>Loading...</p>;
-    //   }
+      if (loading) {
+        return (
+        <div className='flex items-center justify-center h-screen w-full'>
+          <PulseLoader
+            size={18} // size of the loader (in pixels)
+            color={'#1A8F98'} // color of the loader
+            loading={true} // boolean to show/hide the loader
+          />
+        </div>
+      );
+      }
     
-    //   if (error) {
-    //     return <p>Error: {error.message}</p>;
-    //   }
-
-    const getRates = [
-        {
-            id: 1,
-            section: {
-                sectionTitle: 'Air Cargo',
-                rateOptions: [
-                    {
-                        _key: '987f6543d467dd',
-                        type: 'Normal goods (Above 10kg)',
-                        rate: '$7.2',
-                        clearingFee: '₦850',
-                        duration: '10 days'
-                    },
-                    {
-                        _key: 'dnuy654323456',
-                        type: 'Normal goods (Below 10kg)',
-                        rate: '$7.4',
-                        clearingFee: '₦850',
-                        duration: '10 Days'
-                    },
-                ]
-            }
-        },
-        {
-            id: 2,
-            section: {
-                sectionTitle: 'Air Cargo',
-                rateOptions: [
-                    {
-                        _key: '987f6543d467dd',
-                        type: 'Normal goods (Above 10kg)',
-                        rate: '$7.2',
-                        clearingFee: '₦850',
-                        duration: '10 days'
-                    },
-                    {
-                        _key: 'dnuy654323456',
-                        type: 'Normal goods (Below 10kg)',
-                        rate: '$7.4',
-                        clearingFee: '₦850',
-                        duration: '10 Days'
-                    },
-                ]
-            }
-        },
-        {
-            id: 3,
-            section: {
-                sectionTitle: 'Air Cargo',
-                rateOptions: [
-                    {
-                        _key: '987f6543d467dd',
-                        type: 'Normal goods (Above 10kg)',
-                        rate: '$7.2',
-                        clearingFee: '₦850',
-                        duration: '10 days'
-                    },
-                    {
-                        _key: 'dnuy654323456',
-                        type: 'Normal goods (Below 10kg)',
-                        rate: '$7.4',
-                        clearingFee: '₦850',
-                        duration: '10 Days'
-                    },
-                ]
-            }
-        },
-        {
-            id: 4,
-            section: {
-                sectionTitle: 'Air Cargo',
-                rateOptions: [
-                    {
-                        _key: '987f6543d467dd',
-                        type: 'Normal goods (Above 10kg)',
-                        rate: '$7.2',
-                        clearingFee: '₦850',
-                        duration: '10 days'
-                    },
-                    {
-                        _key: 'dnuy654323456',
-                        type: 'Normal goods (Below 10kg)',
-                        rate: '$7.4',
-                        clearingFee: '₦850',
-                        duration: '10 Days'
-                    },
-                ]
-            }
-        },
-    ]
+      if (error) {
+        return <p>Error: {error.message}</p>;
+      }
 
 
   return (
