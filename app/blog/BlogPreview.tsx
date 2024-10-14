@@ -2,10 +2,25 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { IoBookOutline, IoTimeOutline } from 'react-icons/io5'
-import News from '../assets/images/news.jpg'
+import imageUrlBuilder from '@sanity/image-url';
+import sanityClient from '../../blogClient';
+import moment from 'moment'
 
 
-const BlogPreview = () => {
+interface BlogPost {
+    slug: { current: string };
+    mainImage: { asset: { _ref: string } };
+    title: string;
+    body: { children: { text: string }[] }[];
+    publishedAt: string;
+    readngTime: string;
+}
+
+
+const BlogPreview = ({data}: {data: BlogPost}) => {
+
+    const builder = imageUrlBuilder(sanityClient);
+
   return (
     <main className='flex flex-col items-start w-full bg-white px-5 pt-16 max-w-screen-xl md:px-8 md:pt-20 lg:px-12 lg:pt-24 xl:px-28 xl:pt-36'>
         <div className='flex flex-col items-start w-full'>
@@ -32,25 +47,26 @@ const BlogPreview = () => {
          </div>
 
          <Link
-         href={'/newsDetails'}
-        //  to={`/blog/${data.slug.current}`} 
+         href={`/blog/${data?.slug?.current?.toString()}}`} 
          className='relative flex items-end justify-center w-full mt-3.5 md:mt-6 lg:mt-8 xl:mt-9'>
              <Image className='h-[500px] w-full object-cover rounded-2xl md:h-[400px] md:rounded-3xl lg:h-[450px] xl:h-[650px]'
-            //  src={builder.image(data.mainImage.asset._ref).url()} 
-            src={News}
-             alt='preview_img' loading='lazy' />
+             src={builder.image(data.mainImage.asset._ref).url()} 
+             width={100}
+             height={100}
+             quality={90} 
+             loading='lazy' 
+             alt='preview_img' 
+             />
              <div className='absolute opacity-50 h-[500px] w-full bg-[#191919] rounded-2xl md:h-[400px] md:rounded-3xl lg:h-[450px] xl:h-[650px]'></div>
 
              <div className='absolute flex flex-col items-start w-full px-3 pb-5 md:px-8 lg:px-11 xl:px-16'>
                   <p className='text-base text-[#F8C605] font-medium font-sans text-start capitalize mt-3 pr-3 leading-7 w-full md:text-lg md:w-[95%] md:font-normal lg:text-2xl lg:leading-8 
                                 lg:font-light lg:w-[85%] xl:mt-4 xl:text-[32px] xl:leading-[45px]'>
-                      {/* {data.title} */}
-                      News Title
+                      {data.title}
                   </p>
                   <p className='text-[13px] text-[#ffffff] font-normal text-start mt-3 pr-3 leading-6 w-full md:font-light md:w-[95%] md:leading-5 lg:leading-[22px] xl:mt-4 
                                 xl:leading-7 xl:text-base'>
-                      {/* {`${data.body[0].children[0].text.substring(0, 200)}...`} */}
-                      This is the news description
+                      {`${data.body[0].children[0].text.substring(0, 200)}...`}
                       <span className='text-[#F8C605] font-medium text-sm ml-1.5'>Read more</span>
                   </p>
 
@@ -61,8 +77,7 @@ const BlogPreview = () => {
                          <div className='flex justify-start items-center'>
                              <IoTimeOutline className='text-base text-white md:text-lg xl:text-xl' />
                              <p className='text-[10px] text-white font-light text-start pl-1.5 pt-[2px] lg:text-xs xl:text-sm'>
-                                  {/* {moment(data.publishedAt).format('D MMMM, YYYY')} */}
-                                  2,11,2024
+                                  {moment(data.publishedAt).format('D MMMM, YYYY')}
                              </p>
                          </div>
                       </div>
@@ -70,8 +85,7 @@ const BlogPreview = () => {
                       <div className='flex justify-end items-center w-[35%]'>
                              <IoBookOutline className='text-base text-white xl:text-xl' />
                              <p className='text-[10px] text-white font-light pl-1.5 pt-[2px] lg:text-xs xl:text-sm'>
-                                 {/* {data.readngTime} read */}
-                                 30 minutes read
+                                 {data.readngTime} read
                              </p>
                          </div>
                   </div>

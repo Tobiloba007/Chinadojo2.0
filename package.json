@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^6.22.1",
+    "@sanity/image-url": "^1.0.2",
     "google-fonts": "^1.0.0",
+    "moment": "^2.30.1",
     "next": "14.2.14",
     "nextjs-fonts": "^0.22.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.3.0"
+    "react-icons": "^5.3.0",
+    "react-spinners": "^0.14.1"
   },
   "devDependencies": {
     "@types/node": "^20",
