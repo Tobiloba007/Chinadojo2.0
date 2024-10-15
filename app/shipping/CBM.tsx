@@ -1,25 +1,31 @@
+"use client"
+
 import React, { useState } from 'react'
 import { FaEquals } from 'react-icons/fa'
 
-const CBM = () => {
-    const [length, setLength] = useState('');
-    const [width, setWidth] = useState('');
-    const [height, setHeight] = useState('');
-    const [result, setResult] = useState('');
 
-    const lengthMeter = length / 100
-    const widthMeter = width / 100
-    const heightMeter = height / 100
-    const cubicMeter = lengthMeter * widthMeter * heightMeter
+const CBM = () => {
+    const [length, setLength] = useState<number | any>();
+    const [width, setWidth] = useState<number | any>();
+    const [height, setHeight] = useState<number | any>();
+    const [result, setResult] = useState<number | string | null>(null);
+
+    const lengthMeter: number = length !== null ? (length / 100) : 0
+    const widthMeter: number =  width !== null ? (width / 100) : 0
+    const heightMeter: number = height !== null ? (height / 100) : 0
+    const cubicMeter: number = lengthMeter * widthMeter * heightMeter;
     const meterCube = cubicMeter.toFixed(5)
     const cubicFeetCal = cubicMeter * 35.3147 
     const cubicFeet = (Math.ceil(cubicFeetCal * 10) / 10).toFixed(1)
-    
+
     const calculateCubicMeter = () => {
+        if (!length || !width || !height) return;
         const calculate = length * width * height / 1000000;
         const cubicResult =  (Math.ceil(calculate * 10) / 10).toFixed(1)
         setResult(cubicResult);
       };
+
+
   return (
     <div className='flex flex-col items-center justify-center w-full mt-12 mb-10 max-w-screen-xl'>
 
@@ -43,7 +49,7 @@ const CBM = () => {
                 placeholder='Length'
                 id="length"
                 value={length}
-                onChange={(e) => setLength((e.target.value))}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLength(Number(e.target.value))}
                />
                <h1 className='text-lg ml-2 text-[#646262] xl:text-xl'>cm</h1>
             </div>
@@ -55,7 +61,7 @@ const CBM = () => {
                 placeholder='Width'
                 id="width"
                 value={width}
-                onChange={(e) => setWidth((e.target.value))}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setWidth(Number(e.target.value))}
                />
                <h1 className='text-lg ml-2 text-[#646262] xl:text-xl'>cm</h1>
             </div>
@@ -67,22 +73,25 @@ const CBM = () => {
                 placeholder='Height'
                 id="height"
                 value={height}
-                onChange={(e) => setHeight((e.target.value))}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setHeight(Number(e.target.value))}
                />
                <h1 className='text-lg ml-2 text-[#646262] xl:text-xl'>cm</h1>
             </div>
+            
                           {/* ANSWER */}
             <div className='flex items-center justify-center w-full my-[10px] md:mt-4'>
                 <FaEquals 
                 onClick={calculateCubicMeter}
                 className='text-4xl bg-[#1A8F98] text-[#ffff] py-1 px-1 rounded-md' />
+
                <input 
                 className='border-[0.1em] border-[#1A8F98] rounded-md outline-[#1A8F98] h-10 w-36 pl-4 mx-2 ml-4 md:w-44'
                 type="number" 
-                value={result}
+                value={result === null ? '' : result}
                 readOnly
                 placeholder='?'
                />
+
                <h1 className='text-base text-[#646262] md:text-lg xl:text-xl'>cm<sup>3</sup> <small className='text-[10px] md:text-[13px] xl:text-[16px]'>(Cubic Meter)</small></h1>
             </div>
         </div>
