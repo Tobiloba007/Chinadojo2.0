@@ -1,7 +1,7 @@
 import React from 'react'
-import Vision from '../assets/icons/vision.svg'
-import Mission from '../assets/icons/target.svg'
-import Values from '../assets/icons/values.svg'
+import Vision from '../assets/icons/vision.png'
+import Mission from '../assets/icons/target.png'
+import Values from '../assets/icons/values.png'
 import Image from 'next/image'
 
 
