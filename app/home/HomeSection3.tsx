@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
-import icon1 from '../assets/icons/Icon1.svg'
-import icon2 from '../assets/icons/Icon2.svg'
-import icon3 from '../assets/icons/Icon3.svg'
-import icon4 from '../assets/icons/Icon4.svg'
-import icon5 from '../assets/icons/Icon5.svg'
-import icon6 from '../assets/icons/Icon6.svg'
+import icon1 from '../assets/icons/Icon1.png'
+import icon2 from '../assets/icons/Icon2.png'
+import icon3 from '../assets/icons/Icon3.png'
+import icon4 from '../assets/icons/Icon4.png'
+import icon5 from '../assets/icons/Icon5.png'
+import icon6 from '../assets/icons/Icon6.png'
 
 
 const HomeSection3 = () => {

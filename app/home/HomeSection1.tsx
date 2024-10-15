@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
-import image1 from '../assets/images/image1.svg'
-import image2 from '../assets/images/image2.svg'
-import image3 from '../assets/images/image3.svg'
-import image4 from '../assets/images/image4.svg'
-import image5 from '../assets/images/image5.svg'
-import image6 from '../assets/images/image6.svg'
+import image1 from '../assets/images/image1.png'
+import image2 from '../assets/images/image2.png'
+import image3 from '../assets/images/image3.png'
+import image4 from '../assets/images/image4.png'
+import image5 from '../assets/images/image5.png'
+import image6 from '../assets/images/image7.png'
+import image7 from '../assets/images/image6.png'
 import { GoDotFill } from 'react-icons/go'
 import { LiaStarSolid } from 'react-icons/lia'
 import { PiCheckCircleLight } from 'react-icons/pi'
@@ -42,6 +43,11 @@ const HomeSection1 = () => {
         },
         {
             id: 6,
+            image: image7,
+            title: 'Air cargo'
+        },
+        {
+            id: 3,
             image: image6,
             title: 'Air cargo'
         },

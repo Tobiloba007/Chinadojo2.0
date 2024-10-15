@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/logo.png'
 import { IoCloseOutline } from 'react-icons/io5'
 import { LuMenu } from 'react-icons/lu'
 
@@ -61,7 +61,7 @@ const Navigation = ({aboutTab, blogTab, servicesTab, shippingTab}: Props) => {
 
             <div className='flex items-center justify-between w-full px-5 lg:px-0 lg:w-max'>
                 <Link href={'/'}>
-                   <Image className='h-full'
+                   <Image className='h-[43] w-[169px] xl:h-[55px] xl:w-[210px]'
                    src={logo}
                    alt='logo'
                    />
