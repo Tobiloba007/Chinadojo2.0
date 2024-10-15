@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import logo from '../assets/images/logo.svg'
 import { IoCloseOutline } from 'react-icons/io5'

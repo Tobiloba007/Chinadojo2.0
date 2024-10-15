@@ -1,14 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-      domains: ['cdn.sanity.io'],
-    },
-    rewrites: [
+  images: {
+    domains: ['cdn.sanity.io'],
+  },
+  rewrites: async () => {
+    return [
       {
         source: '/blog/:slug*(.*)',
         destination: '/blog/[slug]$1',
       },
-    ],
-  };
+    ];
+  },
+};
 
 export default nextConfig;

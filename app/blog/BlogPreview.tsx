@@ -47,7 +47,7 @@ const BlogPreview = ({data}: {data: BlogPost}) => {
          </div>
 
          <Link
-         href={`/blog/${data?.slug?.current?.toString()}}`} 
+         href={`/blog/${data?.slug?.current}}`}
          className='relative flex items-end justify-center w-full mt-3.5 md:mt-6 lg:mt-8 xl:mt-9'>
              <Image className='h-[500px] w-full object-cover rounded-2xl md:h-[400px] md:rounded-3xl lg:h-[450px] xl:h-[650px]'
              src={builder.image(data.mainImage.asset._ref).url()} 

@@ -9,7 +9,6 @@ import image6 from '../assets/images/image6.svg'
 import { GoDotFill } from 'react-icons/go'
 import { LiaStarSolid } from 'react-icons/lia'
 import { PiCheckCircleLight } from 'react-icons/pi'
-import Link from 'next/link'
 
 
 
@@ -112,7 +111,7 @@ const HomeSection1 = () => {
                           Customer Satisfaction
                       </p>
                       <div className='flex items-center gap-1 mt-0.5'>
-                         {Array(5).fill().map((_, index) => (
+                         {Array(5).fill(1).map((_, index) => (
                          <LiaStarSolid key={index} className='text-[9px] text-[#888888] lg:text-[11px] xl:text-sm' />
                          ))}
                       </div>
@@ -128,7 +127,7 @@ const HomeSection1 = () => {
                           Process Optimization
                       </p>
                       <div className='flex items-center gap-1 mt-0.5'>
-                         {Array(5).fill().map((_, index) => (
+                         {Array(5).fill(1).map((_, index) => (
                          <LiaStarSolid key={index} className='text-[9px] text-[#888888] lg:text-[11px] xl:text-sm' />
                          ))}
                       </div>
@@ -142,7 +141,7 @@ const HomeSection1 = () => {
                            Security
                       </p>
                       <div className='flex items-center gap-1 mt-0.5'>
-                         {Array(5).fill().map((_, index) => (
+                         {Array(5).fill(1).map((_, index) => (
                          <LiaStarSolid key={index} className='text-[9px] text-[#888888] lg:text-[11px] xl:text-sm' />
                          ))}
                       </div>
