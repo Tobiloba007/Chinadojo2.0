@@ -1,18 +1,20 @@
+"use client"
+
 import React, { useState } from 'react'
 
 const LandingPrice = () => {
-    const [goods, setGoods] = useState('');
-    const [weight, setWeight] = useState('');
-    const [shipping, setShipping] = useState('');
-    const [clearing, setClearing] = useState('');
-    const [rate, setRate] = useState('');
+    const [goods, setGoods] = useState<number | any>();
+    const [weight, setWeight] = useState<number | any>();
+    const [shipping, setShipping] = useState<number | any>();
+    const [clearing, setClearing] = useState<number | any>();
+    const [rate, setRate] = useState<number | any>(null);
     const [result, setResult] = useState(false);
 
     const shippingFee =  ((weight * shipping) * rate).toFixed(1)
     const clearingFee =  (weight * clearing).toFixed(1)
     const landingCost = parseInt(goods) + parseInt(shippingFee) + parseInt(clearingFee)
     
-    const calculate = (e) => {
+    const calculate = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setResult(true);
     }
