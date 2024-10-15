@@ -23,7 +23,7 @@ interface BlogPost {
     readngTime: string;
 }
 
-const page = () => {
+const Page = () => {
     const [stories, setStories] = useState<BlogPost[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<Error | null>(null);
@@ -135,4 +135,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

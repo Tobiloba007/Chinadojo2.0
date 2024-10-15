@@ -80,7 +80,7 @@ const Testimonials = () => {
                             {item.name}
                         </p>
                         <div className='flex items-center gap-0.5 mt-1'>
-                         {Array(5).fill().map((_, index) => (
+                         {Array(5).fill(1).map((_, index) => (
                          <PiStarFill key={index} className='text-[11px] text-[#FFC250] lg:text-[11px] xl:text-sm' />
                          ))}
                         </div>

@@ -11,7 +11,7 @@ import sanityClient from '../../blogClient'
 
 
 const Blog = () => {
-  const [stories, setStories] = useState<any[]>([]);
+  const [stories, setStories] = useState([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
 

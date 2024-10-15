@@ -77,7 +77,7 @@ const Footer = () => {
                   Ready to Get Started?
                </p>
                <p className='text-[11px] text-white font-light text-center mt-2 w-[80%] md:text-sm md:w-[65%] md:font-extralight lg:w-[50%] xl:text-base xl:w-[40%] 2xl:w-[45%]'>
-                  If you have any questions or need clarification, feel free to reach out. Let us know what you're looking for, and we'll respond promptly.
+                  If you have any questions or need clarification, feel free to reach out. Let us know what you&apos;re looking for, and we&apos;ll respond promptly.
                </p>
                <a 
                href='https://api.whatsapp.com/send?phone=2348142154108&text=Hello%20ChinaDojo'
