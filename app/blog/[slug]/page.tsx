@@ -25,27 +25,27 @@ interface BlogPost {
     readngTime: string;
 }
 
-interface BlockContentProps {
-  blocks: any[];
-  projectId: string;
-  dataset: string;
-  serializers: {
-    types: {
-      heading: (props: { children: React.ReactNode }) => JSX.Element;
-      link: (props: { children: React.ReactNode; node: { url: string; children: { text: string }[] } }) => JSX.Element;
-    };
-    mark: {
-      bold: (props: { children: React.ReactNode }) => JSX.Element;
-    };
-    text: (props: { children: React.ReactNode }) => JSX.Element;
-    list: (props: { children: React.ReactNode }) => JSX.Element;
-    listItem: (props: { children: React.ReactNode }) => JSX.Element;
-  };
-  imageOptions: {
-    fit: string;
-    [key: string]: string | number | { w: number; h: number };
-  };
-}
+// interface BlockContentProps {
+//   blocks: any[];
+//   projectId: string;
+//   dataset: string;
+//   serializers: {
+//     types: {
+//       heading: (props: { children: React.ReactNode }) => JSX.Element;
+//       link: (props: { children: React.ReactNode; node: { url: string; children: { text: string }[] } }) => JSX.Element;
+//     };
+//     mark: {
+//       bold: (props: { children: React.ReactNode }) => JSX.Element;
+//     };
+//     text: (props: { children: React.ReactNode }) => JSX.Element;
+//     list: (props: { children: React.ReactNode }) => JSX.Element;
+//     listItem: (props: { children: React.ReactNode }) => JSX.Element;
+//   };
+//   imageOptions: {
+//     fit: string;
+//     [key: string]: string | number | { w: number; h: number };
+//   };
+// }
 
 
 interface SerializersProps {
@@ -210,13 +210,9 @@ if (loading) {
                }}
                imageOptions={{
                 fit: 'max',
-                w: 650, 
-                h: 650,
-                [window.innerWidth < 768]: {
-                  w: 200,
-                  h: 200,
-                },
-               }}
+                w: window.innerWidth > 768 ? 650 : 350,
+                h: window.innerWidth > 768 ? 700 : 400,
+              }}
             />
         </div>
 
