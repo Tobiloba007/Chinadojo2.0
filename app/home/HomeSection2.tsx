@@ -49,8 +49,8 @@ const HomeSection2 = () => {
           <div className='flex items-center justify-end w-full mt-5 md:mt-8 lg:mt-10'> 
                  <Link 
                  href={'/services'}
-                 className='flex items-center justify-center p-3 bg-primary md:p-3.5 lg:p-4 xl:p-5'>
-                     <BsArrowDownRight className='text-white text-lg lg:text-2xl xl:text-[26px]' />
+                 className='flex items-center justify-center p-3 bg-primary text-white hover:text-secondary md:p-3.5 lg:p-4 xl:p-5'>
+                     <BsArrowDownRight className='text-lg lg:text-2xl xl:text-[26px]' />
                  </Link>
           </div>
 

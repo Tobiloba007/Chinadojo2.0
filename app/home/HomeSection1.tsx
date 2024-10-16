@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import image1 from '../assets/images/image1.png'
 import image2 from '../assets/images/image2.png'
 import image3 from '../assets/images/image3.png'
@@ -82,10 +81,12 @@ const HomeSection1 = () => {
     
           
            {/* SLIDING IMAGES */}
-        <div className='flex items-center justify-start w-full mt-20 px-5 overflow-x-scroll gap-3 scrollbar-hidden md:mt-20 md:px-8 md:gap-4 
-                        lg:gap-[17px] lg:px-12 xl:px-28 xl:mt-28 xl:gap-6'>
+        <div className='flex items-center w-full overflow-hidden'>
+
+        <div className='animate-loop-scroll flex items-center justify-start mt-20 pl-1.5 gap-3 scrollbar-hidden md:mt-20 md:px-2 md:gap-4 
+                        lg:gap-[17px] lg:px-2 xl:px-3 xl:mt-28 xl:gap-6'>
             {slidingImages.map((item) => (
-              <div key={item.id} className='relative w-[260px] h-[130px] flex-shrink-0 lg:h-full lg:w-[275px] xl:w-[400px]'>
+              <div key={item.id} className='sliding-images relative w-[260px] h-[130px] max-w-none flex-shrink-0 lg:h-full lg:w-[275px] xl:w-[400px]'>
                   <Image className='w-full h-full object-cover rounded-[10px] lg:rounded-xl xl:rounded-[18px]'
                   src={item.image}
                   alt='sliding_image'
@@ -102,6 +103,32 @@ const HomeSection1 = () => {
                   </div>
               </div>
             ))}
+
+          </div>
+
+        <div className='animate-loop-scroll flex items-center justify-start mt-20 px-1.5 gap-3 scrollbar-hidden md:mt-20 md:px-2 md:gap-4 
+                        lg:gap-[17px] lg:px-2 xl:px-3 xl:mt-28 xl:gap-6' aria-hidden="true">
+            {slidingImages.map((item) => (
+              <div key={item.id} className='sliding-images relative w-[260px] h-[130px] max-w-none flex-shrink-0 lg:h-full lg:w-[275px] xl:w-[400px]'>
+                  <Image className='w-full h-full object-cover rounded-[10px] lg:rounded-xl xl:rounded-[18px]'
+                  src={item.image}
+                  alt='sliding_image'
+                  quality={90}
+                  loading="lazy"
+                  objectFit='cover'
+                  />
+
+                  <div className='flex items-center justify-start w-full absolute top-3 left-3 xl:left-4 xl:top-4'>
+                       <GoDotFill className='text-white text-sm mr-1 lg:text-base lg:mr-1.5 xl:text-lg xl:mr-2.5' />
+                       <p className='inter text-center text-white font-normal text-[10px] lg:text-[11px] xl:text-[13px]'>
+                           {item.title}
+                       </p>
+                  </div>
+              </div>
+            ))}
+
+          </div>
+
           </div>
           
 

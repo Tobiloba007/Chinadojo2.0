@@ -89,8 +89,9 @@ const Page = () => {
                className={`flex flex-col items-start w-full mb-8 shadow md:mr-3 md:w-[31.5%] lg:mr-3.5 lg:w-[31.5%] xl:mr-5`}>
                    <Image className='h-[224px] w-full rounded-t-xl object-cover md:h-40 lg:h-[180px] xl:h-72 xl:rounded-t-2xl'
                    src={builder.image(item.mainImage.asset._ref).url()} 
-                   width={100}
-                   height={100}
+                   width={800}
+                   height={600}
+                   quality={90}
                    loading='lazy'
                    alt='news_image' 
                    />
