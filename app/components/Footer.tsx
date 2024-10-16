@@ -83,7 +83,7 @@ const Footer = () => {
                href='https://api.whatsapp.com/send?phone=2348142154108&text=Hello%20ChinaDojo'
                target="_blank"
                rel="noopener noreferrer"
-               className='text-[11px] text-white font-light text-center py-2.5 rounded-3xl bg-[#09CA4B] mt-6 px-8 md:text-sm xl:text-base xl:px-10 xl:py-3 xl:mt-7'>
+               className='text-[11px] text-white font-light text-center py-2.5 rounded-3xl bg-[#09CA4B] hover:bg-secondary mt-6 px-8 md:text-sm xl:text-base xl:px-10 xl:py-3 xl:mt-7'>
                     Contact us
                </a>
          </div>
