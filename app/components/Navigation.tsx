@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import logo from '../assets/images/logo.png'
 import { IoCloseOutline } from 'react-icons/io5'
@@ -52,12 +52,34 @@ const Navigation = ({aboutTab, blogTab, servicesTab, shippingTab}: Props) => {
     ]
 
 
+     const [isSticky, setIsSticky] = useState<boolean>(false);
+
+     useEffect(() => {
+       const handleScroll = () => {
+         if (window.scrollY > 50) {
+           setIsSticky(true);
+         } else {
+           setIsSticky(false);
+         }
+       };
+
+       window.addEventListener('scroll', handleScroll);
+
+       return () => {
+         window.removeEventListener('scroll', handleScroll);
+       };
+     }, []);
+
+
   return (
-    <main className='flex items-center justify-center w-full inter md:px-8 lg:px-12 xl:px-28'>
+    <main className='relative flex items-center justify-center w-full h-full inter md:px-8 lg:px-12 xl:px-28'>
 
         <div className={`flex flex-col items-center w-full py-5 z-50 md:mt-6 md:rounded-2xl md:py-2.5 md:shadow-sm md:border-[0.5px] lg:flex-row lg:justify-between 
-                         lg:px-5 lg:h-max lg:py-2 lg:rounded-xl lg:bg-white lg:mt-5 xl:mt-7 xl:py-3
-            ${open ? 'bg-[#EEF2F6] fixed top-0 h-full md:w-[91.6%] justify-start md:h-full md:mt-12 lg:relative' : 'bg-transparent md:bg-white'}`}>
+                        lg:px-5 lg:h-max lg:py-2 lg:rounded-xl lg:bg-white lg:mt-5 xl:mt-7 xl:py-3
+            ${open ? 'bg-[#EEF2F6] fixed top-0 h-full md:w-[91.6%] justify-start md:h-full md:mt-12 lg:relative' : 'bg-transparent md:bg-white'}
+            ${isSticky && `fixed top-5 inset-x-0 w-[calc(100%-1rem)] mx-auto z-50 transition-all duration-1000 ease-linear rounded-2xl py-1.5 shadow-sm border-[0.5px]
+                         bg-white md:inset-x-7 md:w-[calc(100%-4rem)] lg:inset-x-7 lg:w-[calc(100%-6rem)] xl:inset-x-7 xl:w-[calc(100%-14rem)]`}
+            `}>
 
             <div className='flex items-center justify-between w-full px-5 lg:px-0 lg:w-max'>
                 <Link href={'/'}>
