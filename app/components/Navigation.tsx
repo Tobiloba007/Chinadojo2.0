@@ -75,9 +75,9 @@ const Navigation = ({aboutTab, blogTab, servicesTab, shippingTab}: Props) => {
     <main className='relative flex items-center justify-center w-full h-full inter md:px-8 lg:px-12 xl:px-28'>
 
         <div className={`flex flex-col items-center w-full py-5 z-50 md:mt-6 md:rounded-2xl md:py-2.5 md:shadow-sm md:border-[0.5px] lg:flex-row lg:justify-between 
-                        lg:px-5 lg:h-max lg:py-2 lg:rounded-xl lg:bg-white lg:mt-5 xl:mt-7 xl:py-3
+                        lg:px-5 lg:h-max lg:py-2 lg:rounded-xl lg:bg-white lg:mt-5 xl:mt-7 xl:py-3 xl:rounded-2xl
             ${open ? 'bg-[#EEF2F6] fixed top-0 h-full md:w-[91.6%] justify-start md:h-full md:mt-12 lg:relative' : 'bg-transparent md:bg-white'}
-            ${isSticky && `fixed top-5 inset-x-1 w-[calc(100%-1.5rem)] mx-auto z-50 transition-all duration-1000 ease-linear rounded-2xl py-1.5 shadow-sm border-[0.5px]
+            ${isSticky && `fixed top-5 inset-x-[5px] w-[calc(100%-2rem)] mx-auto z-50 transition duration-1000 ease-linear rounded-2xl py-[7px] shadow-sm border-[0.5px]
                          bg-white md:inset-x-7 md:w-[calc(100%-4rem)] lg:inset-x-7 lg:w-[calc(100%-6rem)] xl:inset-x-7 xl:w-[calc(100%-14rem)]`}
             `}>
 
