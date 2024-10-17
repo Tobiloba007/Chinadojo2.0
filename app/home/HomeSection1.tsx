@@ -54,7 +54,7 @@ const HomeSection1 = () => {
 
 
   return (
-      <main className='flex flex-col items-center justify-start w-full h-full pt-24 max-w-[1680px] mx-auto md:pt-20'>
+      <main className='flex flex-col items-center justify-start w-full pt-24 max-w-[1680px] mx-auto md:pt-20'>
           
           {/* INTRODUCTION MESSAGES */}
         <div className='flex flex-col items-center w-full px-5 max-w-[1440px] mx-auto'>
