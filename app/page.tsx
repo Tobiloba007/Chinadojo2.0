@@ -13,7 +13,7 @@ import Testimonials from "./home/Testimonials";
 
 export default function Home() { 
   return (
-    <main className="flex flex-col items-center justify-start w-full bg-gradient-to-r from-[#EEF2F6] via-[#FFFFFF] to-[#EEF2F6] 
+    <main className="flex flex-col items-center justify-start w-full bg-gradient-to-r from-[#EEF2F6] via-[#FFFFFF] to-[#eff6fd] 
                     max-w-[1680px] mx-auto bg-gradient-to-t from-transparent to-[#EEF2F6] via-[#FFFFFF] h-screen">
 
       <Navigation 

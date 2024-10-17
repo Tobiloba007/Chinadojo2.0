@@ -90,6 +90,8 @@ const HomeSection1 = () => {
                   <Image className='w-full h-full object-cover rounded-[10px] lg:rounded-xl xl:rounded-[18px]'
                   src={item.image}
                   alt='sliding_image'
+                  height={300}
+                  width={400}
                   quality={90}
                   loading="lazy"
                   objectFit='cover'
