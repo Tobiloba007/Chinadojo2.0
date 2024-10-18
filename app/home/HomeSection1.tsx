@@ -3,9 +3,9 @@ import image1 from '../assets/images/image1.png'
 import image2 from '../assets/images/image2.png'
 import image3 from '../assets/images/image3.png'
 import image4 from '../assets/images/image4.png'
-import image5 from '../assets/images/image5.png'
-import image6 from '../assets/images/image7.png'
-import image7 from '../assets/images/image6.png'
+// import image5 from '../assets/images/image5.png'
+// import image6 from '../assets/images/image7.png'
+// import image7 from '../assets/images/image6.png'
 import { GoDotFill } from 'react-icons/go'
 import { LiaStarSolid } from 'react-icons/lia'
 import { PiCheckCircleLight } from 'react-icons/pi'
@@ -35,21 +35,21 @@ const HomeSection1 = () => {
             image: image4,
             title: 'Home delivery'
         },
-        {
-            id: 5,
-            image: image5,
-            title: 'Door to door delivery'
-        },
-        {
-            id: 6,
-            image: image7,
-            title: 'Air cargo'
-        },
-        {
-            id: 3,
-            image: image6,
-            title: 'Air cargo'
-        },
+        // {
+        //     id: 5,
+        //     image: image5,
+        //     title: 'Door to door delivery'
+        // },
+        // {
+        //     id: 6,
+        //     image: image7,
+        //     title: 'Air cargo'
+        // },
+        // {
+        //     id: 3,
+        //     image: image6,
+        //     title: 'Air cargo'
+        // },
     ]
 
 
