@@ -22,7 +22,7 @@ const HomeSection2 = () => {
         },
     ]
 
-    const videoId = 'A6IHZn4WftI'
+    const videoId = 'q5UWVgxt3gk'
 
   return (
       <main className='flex flex-col items-center w-full bg-white px-5 pt-16 md:px-8 md:pt-20 lg:px-12 lg:pt-24 xl:px-28 xl:pt-36'>
