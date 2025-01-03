@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google"
 import "./globals.css";
+import ReduxWrapper from "./reduxWrapper";
 
 const clash_display = localFont({
   src: "./fonts/ClashDisplay-Variable.ttf",
@@ -27,12 +28,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${clash_display.variable} ${inter_init.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ReduxWrapper>
+       <html lang="en">
+         <body
+           className={`${clash_display.variable} ${inter_init.variable} antialiased`}
+         >
+           {children}
+         </body>
+       </html>
+    </ReduxWrapper>
   );
 }

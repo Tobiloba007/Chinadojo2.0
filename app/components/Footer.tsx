@@ -17,12 +17,12 @@ const Footer = () => {
       {
          id: 2,
          icon: <FaFacebookF className='text-xs text-white xl:text-base' />,
-         link: `https://web.facebook.com/chinadojo1688?mibextid=LQQJ4d&_rdc=1&_rdr`
+         link: ``
       },
       {
          id: 3,
          icon: <FaInstagram className='text-xs text-white xl:text-base' />,
-         link: `https://www.instagram.com/chinadojo?igshid=YmMyMTA2M2Y%3D`
+         link: `https://www.instagram.com/chinadojologistics/profilecard/?igsh=NGFocHpkMDcyemRq`
       },
       {
          id: 4,
@@ -63,6 +63,10 @@ const Footer = () => {
       {
          id: 3,
          desc: `+234 (0) 704 083 1673`,
+      },
+      {
+         id: 4,
+         desc: `+86 195 8746 4415`,
       },
    ]
 

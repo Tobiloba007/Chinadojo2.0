@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
-import img from '../assets/images/testimonial.jpg'
+import img1 from '../assets/images/testimony1.jpg'
+import img2 from '../assets/images/testimony2.jpg'
+import img3 from '../assets/images/testimony3.jpg'
+import img4 from '../assets/images/testimony4.jpg'
+import img5 from '../assets/images/testimony5.jpg'
 import { PiStarFill } from 'react-icons/pi'
 
 
@@ -9,40 +13,35 @@ const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            comments: `Chinadojo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn't used, which have also proved to be easy to use and reliable.`,
-            image: img,
-            name: `Ashley Cooper`
+            comments: `The staff are always online to reply and to comfirm your order and most importantly my goods has never arrived in a bad condition I recommend chinadojo procurement agency if you want to ship phones laptops from China to Nigeria .`,
+            image: img1,
+            name: `Barbra Ivieh Omoregie`
         },
         {
             id: 2,
-            comments: `Chinadojo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn't used, which have also proved to be easy to use and reliable.`,
-            image: img,
-            name: `Noah Jack`
+            comments: `They are always available for calls and your items will never get missing and if it gets missing they will refund you. They are the best Procurement Agency I have ever worked with.`,
+            image: img2,
+            name: `Adefuye oluwaseun`
         },
         {
             id: 3,
-            comments: `Chinadojo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. `,
-            image: img,
-            name: `Ashley Cooper`
+            comments: `Chinadojo is the best company to ship from China We at Togo use chinadojo to ship our goods from China and we have never had any bad experience using them`,
+            image: img3,
+            name: `Comlane Rene`
         },
         {
             id: 4,
-            comments: `Chinadojo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn't used, which have also proved to be easy to use and reliable.Teamollo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch.`,
-            image: img,
-            name: `Gabrile Jackson`
+            comments: `The Delivery was fast I have to commend Chinadojo logistics on this💯 I will definitely use your service again.... Because shipping company has shown me shenge on deliveries 🙏`,
+            image: img4,
+            name: `Oghenerukewe Efemuaye`
         },
         {
             id: 5,
-            comments: `Chinadojo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn't used, which have also proved to be easy to use and reliable.`,
-            image: img,
-            name: `Ashley Cooper`
+            comments: `Chinadojo handles all my transactions smoothly they are very reliable, accessible and friendly they are good in all aspects from payment, procurement and shipping There customer service is topnotch.`,
+            image: img5,
+            name: `Jumia Oziama`
         },
-        {
-            id: 6,
-            comments: `Chinadojo delivered the site with inthe timeline as they requested. Inthe end, the client found a 50% increase in traffic with in days since its launch. They also had an impressive ability to use technologies that the company hasn't used, which have also proved to be easy to use and reliable.`,
-            image: img,
-            name: `William Leo`
-        },
+        
     ]
 
 

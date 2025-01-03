@@ -7,33 +7,42 @@ const Faq = () => {
     const faqData = [
         {
             id: 1,
-            question: `What is the shipping rate`,
-            answer: `You can reach out to any of our amazing customer representative for current exchange and shipping rates.`,
+            question: `What types of goods can you ship to my country?`,
+            answer: `We can ship a wide range of goods, from electronics and clothing to furniture and machinery. However, there are certain restrictions on prohibited and restricted items. 
+                     Please refer to our customer service  for more information.`,
         },
         {
             id: 2,
-            question: `How long does it get to Nigeria`,
-            answer: `Normal goods will take 10 days and Hong Kong and sensitive items (battery liquid and powder items) would take 20 days delivery.(Not working days), Sea cargo duration is within 2-3 months.`,
+            question: `How much does shipping cost?`,
+            answer: `Shipping costs are calculated based on the weight, dimensions, and destination of your shipment. You can get an accurate shipping quote by using our online shipping calculator or contacting our customer service.`,
         },
         {
             id: 3,
-            question: `Do you pickup package in China`,
-            answer: `We don't offer this service yet, But your supplier can deliver the goods to our China warehouse, Kindly reach out to our customer representative to get our address card.`,
+            question: `How long does shipping take?`,
+            answer: `Shipping times vary depending on the destination country, shipping method, and customs clearance procedures.
+                     We offer different shipping services ranging from air to sea to express shipping.
+                     Air shipping  services can deliver your goods within 7-15  days. For sea shipping, it may take 50-70 business days and express takes 2-5 days.
+                    `,
         },
         {
             id: 4,
-            question: `Do you consolidate`,
-            answer: `Yes, we always consolidate and guess what, it is free. Our consolidation services saves you cost and also helps optimize and maximize your shipping experience.`,
+            question: `What customs duties and taxes will I have to pay?`,
+            answer: `Import duties and taxes are determined by the customs authorities of the destination country.  These charges are typically paid by the recipient upon delivery.`,
         },
         {
             id: 5,
-            question: `How do i know if a supplier is legit`,
-            answer: `You can check the store profile, reviews from previous buyers, ask for real time picture or video of the items and most important, try the supplier with a sample order first to see the supplier reliability.`,
+            question: `What documents are required for customs clearance?`,
+            answer: `The specific documents required for customs clearance may vary depending on the nature of your shipment and the destination country. However, common documents include a commercial invoice, packing list, and possibly a certificate of origin.`,
         },
         {
             id: 6,
-            question: `Their calculation is different from ours`,
-            answer: `The prices on the website are mostly just the price, local logistics to deliver it to your agent are not included.`,
+            question: `How should I package my items for shipping?`,
+            answer: `It's important to package your items securely to prevent damage during transit. We recommend using sturdy boxes, bubble wrap, and packing tape.`,
+        },
+        {
+            id: 7,
+            question: `What if my shipment is damaged during transit?`,
+            answer: `If your shipment is damaged during transit, please contact our customer service immediately. We will investigate the incident and take appropriate action immediately.`,
         },
     ]
 
