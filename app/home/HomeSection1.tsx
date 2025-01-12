@@ -70,7 +70,7 @@ const HomeSection1 = () => {
             </p>
 
             <a
-            href='https://api.whatsapp.com/send?phone=2348142154108&text=Hello%20ChinaDojo'
+            href='https://wa.link/gqhss7'
             target="_blank"
             rel="noopener noreferrer"
             className='bg-primary text-white rounded-lg py-2 px-8 text-[11px] mt-7 lg:font-meidium lg:py-2.5 xl:mt-8 xl:py-3 xl:px-12 xl:text-sm xl:rounded-xl'

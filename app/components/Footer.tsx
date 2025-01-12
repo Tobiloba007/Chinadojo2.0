@@ -84,7 +84,7 @@ const Footer = () => {
                   If you have any questions or need clarification, feel free to reach out. Let us know what you&apos;re looking for, and we&apos;ll respond promptly.
                </p>
                <a 
-               href='https://api.whatsapp.com/send?phone=2348142154108&text=Hello%20ChinaDojo'
+               href='https://wa.link/gqhss7'
                target="_blank"
                rel="noopener noreferrer"
                className='text-[11px] text-white font-light text-center py-2.5 rounded-3xl bg-[#09CA4B] hover:bg-secondary mt-6 px-8 md:text-sm xl:text-base xl:px-10 xl:py-3 xl:mt-7'>
