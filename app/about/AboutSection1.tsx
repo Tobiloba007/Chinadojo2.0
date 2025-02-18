@@ -49,7 +49,7 @@ const AboutSection1 = () => {
                 loading='lazy'
                 />
 
-                <ba className='h-20 w-20 rounded-full object-cover absolute right-0 top-0 md:h-[85px] md:w-[85px] lg:h-[95px] lg:w-[95px] xl:h-[120px] xl:w-[120px]'
+                <Image className='h-20 w-20 rounded-full object-cover absolute right-0 top-0 md:h-[85px] md:w-[85px] lg:h-[95px] lg:w-[95px] xl:h-[120px] xl:w-[120px]'
                 src={item.avatar2}
                 alt='our_image'
                 loading='lazy'
